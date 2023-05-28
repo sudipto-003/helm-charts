@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-{{ .Release.Name }}
+  labels:
+    type: {{ .Values.commType }}
+spec:
+  replicas: {{ .Values.replicaCount | default 2 }}
+  selector:
+    matchLabels:
+      type: {{ .Values.commType }}
+  template:
+    metadata:
+      labels:
+        type: {{ .Values.commType }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: grpc
+              protocol: TCP
+              containerPort: {{ .Values.service.targetPort }}
