@@ -1,0 +1,17 @@
+apiVersion: v1
+entries:
+  grpc-server:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-05-30T00:19:22.513332883+06:00"
+    description: A Helm Chart for a simple grpc based server
+    digest: 4717aef6e88700e2613df832bdeaf85985136ce46277e7401dc8ad920119a78e
+    maintainers:
+    - email: sudipto00003@gmail.com
+      name: Halder Sudipto Dip
+    name: grpc-server
+    type: application
+    urls:
+    - https://sudipto-003.github.io/helm-charts/grpc-server-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-05-30T00:19:22.513019096+06:00"
