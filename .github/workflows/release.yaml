@@ -26,5 +26,7 @@ jobs:
 
       - name: Run chart-releasers
         uses: helm/chart-releaser-action@v1.5.0
+        with:
+          charts_dir: charts/grpc-server
         env:
           CR_TOKEN: "${{ secrets.RGITHUB_TOKEN }}"
